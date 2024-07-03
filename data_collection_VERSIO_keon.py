@@ -7,8 +7,6 @@ import sys
 import os
 from pythonosc import udp_client
 
-
-
 #OSC Setup 
 
 IP_local = "127.0.0.1"
