@@ -5,6 +5,16 @@ import json
 import argparse
 import sys
 import os
+from pythonosc import udp_client
+
+
+
+#OSC Setup 
+
+IP_local = "127.0.0.1"
+OSC_port = 7500
+client = udp_client.SimpleUDPClient(IP_local, OSC_port)
+
 
 # Function to fetch and process the data
 def fetch_data(ip):
@@ -35,6 +45,18 @@ def display_data(data_list):
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Updated Data:")
     for data in data_list[0]:
+
+        #send OSC
+        # Send OSC Messages 
+        basemessage="/RFID_"
+        client.send_message(basemessage+"1", data["epc"])
+        client.send_message(basemessage+"2", str(data["ts"]))
+        client.send_message(basemessage+"3", data["port"])
+        client.send_message(basemessage+"4", data["mux1"])
+        client.send_message(basemessage+"5", data["mux2"])
+        client.send_message(basemessage+"6", data["rssi"])
+        client.send_message(basemessage+"7", data["phase"])
+        
         print(data)
 
 # Main loop to continuously fetch and display data
