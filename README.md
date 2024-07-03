@@ -25,11 +25,10 @@ Keon python data stream test, it can be adapted to connect to other protocols
 
 Keon data stream test (update ip of Keon device)
 
-´´´
-
+```
 watch -n 1 "curl -s 192.168.4.139/devices/AdvanReader-m2-70-76af/jsonMinLocation | grep '<result>' | sed 's/.*<status>\(.*\)<\/result>.*/\1/'"
 
-´´´
+```
 
 Python version , get the IP of the Keon reader accesing the router connected to the LAN IN port and put it with the argument --IP 
 
@@ -41,8 +40,7 @@ python data_collection_VERSIO_keon.py --IP 192.168.4.139
 
 impinj data stream test
 
-´´´
-
+```
 curl -G -4 http://192.168.123.163/api/v1/data/stream/
 
-´´´
+```
