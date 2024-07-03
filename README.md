@@ -18,6 +18,14 @@ It is recommended that you don't connect or disconnect the antennas while the po
 
 ## Code available
 
+### Software install
+
+You need to install Python 3 and pip
+run on terminal:
+```
+pip install python-osc
+```
+
 Keon data stream test (update ip of Keon device)
 
 ```
