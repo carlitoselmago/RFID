@@ -5,7 +5,7 @@ There's an example of both curl and python for both Keon and Impinj devices
 The Keon data_collection_VERSIO_keon.py file will only show on screen the amount of tags detected.
 Complete the code with the data collected to use with other data protocols, audio etc.
 
-# Keon
+#Keon
 
 Keon python data stream test, it can be adapted to connect to other protocols 
 
