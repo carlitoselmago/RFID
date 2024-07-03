@@ -1,10 +1,5 @@
 Code for RFID debugging and data collection
 
-There's an example of both curl and python for both Keon and Impinj devices 
-
-The Keon data_collection_VERSIO_keon.py file will only show on screen the amount of tags detected.
-Complete the code with the data collected to use with other data protocols, audio etc.
-
 # Keon
 
 ## How to setup the reader:
@@ -19,9 +14,9 @@ Complete the code with the data collected to use with other data protocols, audi
 
 ### Important note
 
-It is recommended that you don't connect or disconnect other antennas while the power in on, connect the antennas before connecting to power.
+It is recommended that you don't connect or disconnect the antennas while the power is on, turn off the power of the reader before connecting or disconnecting antennas.
 
-Keon python data stream test, it can be adapted to connect to other protocols 
+## Code available
 
 Keon data stream test (update ip of Keon device)
 
@@ -31,6 +26,7 @@ watch -n 1 "curl -s 192.168.4.139/devices/AdvanReader-m2-70-76af/jsonMinLocation
 ```
 
 Python version , get the IP of the Keon reader accesing the router connected to the LAN IN port and put it with the argument --IP 
+In this example, the tag data is printed on screen and sent thru OSC on local network on port 7500
 
 ```
 python data_collection_VERSIO_keon.py --IP 192.168.4.139
