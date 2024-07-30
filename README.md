@@ -40,6 +40,10 @@ In this example, the tag data is printed on screen and sent thru OSC on local ne
 python data_collection_VERSIO_keon.py --IP 192.168.4.139
 ```
 
+### MAX patches to use along with other software such as ableton live:
+
+https://github.com/carlitoselmago/Keonn
+
 # impinj
 
 impinj data stream test
